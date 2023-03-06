@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to top left, #f10505, #17ebe0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container px-5 py-5">
+      <input type="text" id="base" placeholder="Enter Triangle Base" /> <br />
+      <input type="text" id="height" placeholder="Enter Triangle height" />
+      <br />
+      <button class="btn-dark" onclick="area(b,h)">GET AREA</button>
+      <h1 id="triArea"></h1>
+    </div>
+
+    <div class="container">
+      <input type="text" id="year" placeholder="Enter Year" /><br />
+      <button class="btn-dark" onclick="calcAge()">Get in Days</button>
+      <h1 id="days"></h1>
+    </div>
+  </body>
+  <script>
+    b = document.getElementById("base");
+    h = document.getElementById("height");
+
+    function area(b, h) {
+      document.getElementById("triArea").innerHTML = 0.5 * b.value * h.value;
+    }
+
+    let yr = document.getElementById("year");
+
+    function calcAge() {
+      document.getElementById("days").innerHTML = yr.value * 365;
+    }
+  </script>
+</html>
